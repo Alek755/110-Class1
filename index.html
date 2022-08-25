@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Emoji Analyzer Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+
+      <body >
+          <center>
+          <div class="header_section">
+              <h1 class="header_title">EMOJI ANALYZER APP</h1>
+              <span class="emoji">&#128522;</span>
+              <span class="emoji">&#128512;</span>
+              <span class="emoji">&#128532;</span>
+              <span class="emoji">&#128546;</span>
+              <span class="emoji">&#128545;</span>
+              <span class="emoji">&#128548;</span>
+          </div>
+
+          <div class="main_section">
+              <div class="emoji_questions">
+                  <h2 class="emoji_question">Are You Happy?</h2>
+                  <h2 class="emoji_question">Are You Sad?</h2>
+                  <h2 class="emoji_question">Are You Mad?</h2>
+              </div>
+          </div>
+
+          <hr>
+
+          <div id="capture_photo" class="col-md-4 col-sm-12 col-xs-12">
+              <div id="camera"></div>
+              <br>
+              <button class="button" onclick="capture_image()"> Capture Image</button>
+          </div>
+
+          <div class="col-md-4 col-sm-12 col-xs-12">
+              <label>PREDICTION 1</label>
+              <p id="emotion_prediction1" class="emotion_prediction1"></p>
+              <p id="emoji_prediction1" class="emoji_prediction1"></p>
+              <label>PREDICTION 2</label>
+              <p id="emotion_prediction2" class="emotion_prediction2"></p>
+              <p id="emoji_prediction2" class="emoji_prediction2"></p>
+          </div>
+
+          <div id="analyze_photo" class="col-md-4 col-sm-12 col-xs-12">
+            <div id="taken_photo"></div>
+            <br>
+            <button class="button" onclick="analyze_image()"> Analyze Image</button>
+        </div>
+        </center>
+      </body>
+</html>
